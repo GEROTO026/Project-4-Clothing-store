@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Clothing store</h1>
+    <div class="cart">🛒 <span id="cart-count">0</span></div>
+    <nav class="navbar">
+        <button class="nav-toggle">☰ Menu</button>
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+
+  </header>
+  <main class="products"></main>
+  <script src="app.js"></script>
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-menu').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+.navbar {
+  position: relative;
+}
+.nav-toggle {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.nav-menu {
+  display: none;
+  position: absolute;
+  background: #444;
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.nav-menu.show {
+  display: block;
+}
+.nav-menu li {
+  margin: 5px 0;
+}
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.product {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+.product h3 {
+  margin: 10px 0;
+}
+button {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+
+<script>
+    // app.js
+const products = [
+    { id: 1, name: 'Basic T-shirt', price: 20, img: '06516883004-c.webp' },
+    { id: 2, name: 'Basic sweatshirt', price: 35, img: '716Z7oxrb7L.webp' },
+    { id: 3, name: 'Jogger pants', price: 30, img: '08746967005-a1.webp' }
+];
+const productContainer = document.querySelector('.products');
+const cartCount = document.getElementById('cart-count');
+let cart = [];
+function renderProducts() {
+    productContainer.innerHTML = '';
+    products.forEach(product => {
+        productContainer.innerHTML += `
+            <div class="product">
+                <img src="${product.img}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>$${product.price}</p>
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            </div>`;
+    });
+}
+function addToCart(id) {
+    cart.push(id);
+    cartCount.textContent = cart.length;
+}
+renderProducts();
+
+</script>
