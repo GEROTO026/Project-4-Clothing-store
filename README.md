@@ -1,19 +1,18 @@
 # Clothing Store
 **[URL](#):** [https://clothingstore-project4.netlify.app/](https://clothingstore-project4.netlify.app/)
 
-## Descripción
-Clothing Store es un proyecto de tienda en línea enfocado en la venta de ropa. Este sitio simula un e-commerce básico, permitiendo a los usuarios explorar productos y, potencialmente, interactuar con un carrito de compras.
+## Description
+Clothing Store is an online store project focused on selling clothing. This site simulates a basic e-commerce experience, allowing users to browse products and potentially interact with a shopping cart.
 
-## Características
-- Catálogo de productos con imágenes y descripciones.
-- Diseño atractivo orientado a la experiencia del usuario.
-- Posible funcionalidad de carrito de compras (si implementada).
+## Features
+- Product catalog with images and descriptions.
+- Attractive design focused on user experience.
+- Possible shopping cart functionality (if implemented).
 
-## Tecnologías utilizadas (estimadas)
-- **Frontend:** HTML, CSS, JavaScript (quizás React).
-- **Estilos:** CSS personalizado o framework como Bootstrap.
-- **Despliegue:** Netlify.
+## Technologies Used
+- **Frontend:** HTML, CSS, JavaScript.
+- **Deployment:** Netlify.
 
-## Instalación y uso
-1. Ingresa a: [https://clothingstore-project4.netlify.app/](https://clothingstore-project4.netlify.app/).
-2. Explora los productos disponibles en la tienda.
+## Installation and Usage
+1. Go to: [https://clothingstore-project4.netlify.app/](https://clothingstore-project4.netlify.app/).
+2. Explore the products available in the store.
